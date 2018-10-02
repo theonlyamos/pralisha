@@ -10,7 +10,8 @@ html
     script(type='text/javascript', src='/javascripts/jquery.min.js')
     script(type='text/javascript', src='/javascripts/popper.min.js')
     script(type='text/javascript', src='/javascripts/bootstrap.min.js')
-  body(data-spy="scroll", data-target="#navbar", data-offset="150")
+    script(type='text/javascript', src='/javascripts/scripts.js')
+  body
     nav.navbar.navbar-expand-lg.navbar-dark.py-3.sticky-top
       .container
         a.navbar-brand(href='/')
@@ -18,8 +19,8 @@ html
         button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbar')
             span.navbar-toggler-icon
         #navbar.collapse.navbar-collapse.justify-content-end
-          ul.navbar-nav
-            li.nav-item.active
+          ul.navbar-nav.menu
+            li.nav-item
               a.nav-link(href="/") Home
             li.nav-item
               a.nav-link(href="/about") About us

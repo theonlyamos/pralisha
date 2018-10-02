@@ -17,7 +17,7 @@ a.navbar-brand span {
   background-repeat: no-repeat;
 }
 
-.nav-item.active > .nav-link {
+.nav-link.active {
   background: #549eec;
   color: white !important;
   border-radius: 3px;
@@ -53,11 +53,16 @@ header {
   line-height: 1.85em !important;
 }
 
+.carousel-container {
+  margin-top: -350px;
+  width: 60% !important;
+}
+
 p {
   line-height: 1.2em;
 }
 
-header img {
+img.rice_paddy {
   width: 100%;
   filter: brightness(80%) hue-rotate(100deg);
   height: 100%;
