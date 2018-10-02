@@ -11,108 +11,151 @@ html
     script(type='text/javascript', src='/javascripts/popper.min.js')
     script(type='text/javascript', src='/javascripts/bootstrap.min.js')
   body(data-spy="scroll", data-target="#navbar", data-offset="150")
+    nav.navbar.navbar-expand-lg.navbar-dark.py-3.sticky-top
+      .container
+        a.navbar-brand(href='/')
+          img(src='/images/pralisha_logo_white.png', style="width: 300px; height: 70px;")
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbar')
+            span.navbar-toggler-icon
+        #navbar.collapse.navbar-collapse.justify-content-end
+          ul.navbar-nav
+            li.nav-item
+              a.nav-link(href="/") Home
+            li.nav-item
+              a.nav-link(href="/about") About us
+            li.nav-item
+              a.nav-link(href="/products") Products
+            li.nav-item
+              a.nav-link(href="/factory-process") Process
+            li.nav-item
+              a.nav-link(href="/quality") Quality Assurance
+            li.nav-item
+              a.nav-link(href="/contact") Contact us
+            li.nav-item
+              a.nav-link(href="/gallery") Gallery
 
-  .modal.fade(id='picturesModal', tabindex='-1', role='dialog')
-    .modal-dialog.modal-dialog-centered(role='document')
-      .modal-content
-        .modal-body
-          #carousel.carousel.pictures.slide(data-ride="carousel")
-            .carousel-inner
-              .carousel-item.active
-                img(src="/images/"+product+".jpg")
-              each image in pictures
-                .carousel-item
-                  img(src="/"+product+"/"+image)
-            a.carousel-control-prev(href="#carousel", role="button", data-slide="prev")
-              span.carousel-control-prev-icon
-            a.carousel-control-next(href="#carousel", role="button", data-slide="next")
-              span.carousel-control-next-icon
+    block content
 
-              
-  nav#navbar.navbar.navbar-expand-md.navbar-dark.bg-dark.sticky-top
-      a.navbar-brand(href='/')
-        img(src='/images/logo-white.png', style="width: 50px; height: 50px;")
-        span.px-2.text-secondary.d-none.d-md-inline.d-xs-none Pralisha International Company, Ghana Limited
-      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbar1')
-        span.navbar-toggler-icon
-      #navbar1.navbar-collapse.collapse.justify-content-center
-        ul.navbar-nav
-          li.nav-item
-            a.nav-link(href='/#carousel') HOME
-          li.nav-item
-            a.nav-link(href='/#products') PRODUCTS
-          li.nav-item
-            a.nav-link(href='/#contacts') CONTACTS
-      #navbar2.navbar-collapse.collapse.justify-content-end
-        ul.navbar-nav
-          li.nav-item
-            a.nav-link(href="#")
-              i.fa.fa-facebook
-          li.nav-item
-            a.nav-link.text-primary(href="#")
-              i.fa.fa-twitter
-          li.nav-item
-            a.nav-link.text-danger(href="#")
-              i.fa.fa-google-plus
-          li.nav-item
-            a.nav-link.text-warning(href="#")
-              i.fa.fa-envelope
-  block content
-
-  foooter
-      #contact.contact.bg-dark
-        .container
-          .row
-            .col.text-white
-              h5 Navigation
-              ul
-                li 
-                  a.text-secondary(href="/#carousel") Home
-                li 
-                  a.text-secondary(href="/#products") Products
-                li 
-                  a.text-secondary(href="/#contacts") Contacts
-            .col.text-white
-              h5 Products
-              ul
-                li 
-                  a.text-secondary(href="/product/rice") Rice
-                li 
-                  a.text-secondary(href="/product/sugar") Sugar
-                li 
-                  a.text-secondary(href="/product/wheatflour") Wheatflour
-                li
-                  a.text-secondary(href="/product/oil") Cooking Oil
-            .col.text-white
-              h5 Contact
-              ul
-                li
-                  a.text-secondary(href='tel:+233265749181')
-                    i.fa.fa-phone.fa-fw
-                    small +233 265 749 181 
-                li
-                  a.text-secondary(href='tel:+233242989039')
-                    i.fa.fa-phone.fa-fw
-                    small +233 242 989 039
-                li
-                  a.text-secondary(href='mailto:info@pralisha.com')
-                    i.fa.fa-envelope.fa-fw
-                    small info@pralisha.com
-                li
-                  i.fa.fa-facebook-square.fa-fw.fa-2x(style='color: #4267b2;')
-                  i.fa.fa-google-plus-square.fa-fw.fa-2x.text-danger
-                  i.fa.fa-twitter-square.fa-fw.fa-2x.text-info
-            .col.text-white
-              h5 Subscribe
-              h6.text-secondary Enter your email address to receive updates and newsletters from us
+    section.py-5
+      .container
+        .row
+          block section
+          .col-md-3
+            .card.my-2.p-3
+              strong.text-center.text-secondary Get Quotation
+              p
               form(action="")
-                .form-group
-                  .input-group
-                    .input-group-prepend
-                      .input-group-text
-                        i.fa.fa-envelope
-                      input.form-control(type="text")
-                .form-group
-                  button.form-control.btn.btn-outline-secondary.mt-1(type='submit', style='border-radius: 2px !important;') Subscribe
-          hr
-          p.text-white.text-center &copy; Pralisha International Ghana Company Limited.
+              .input-group.text-right
+                  .input-group-prepend
+                  label.input-group-text Quantity
+                  input.form-control(type="number", placeholder="3", name="quantity", id="quanity")
+              .form-group
+                  label.text-secondary(for="details")
+                  textarea.form-control.text-secondary(name="details", rows="6", placeholder="Additional details you would like to add")
+              .form-group.my-2
+                  input(type="hidden", name="product", value="rice")
+                  strong.text-center.text-secondary Your Business Information 
+                  input.form-control(type="text", placeholder="Email", name="email")
+              .form-group.mb-2
+                  input.form-control(type="text", placeholder="Confirm Email", name="conf_email")
+              .form-group.mb-2
+                  input.form-control(type="text", placeholder="Company Name", name="company")
+              .form-group.mb-2
+                  input.form-control(type="text", placeholder="Your Name", name="name")
+              .form-group.mb-2
+                  button.btn.btn-primary.btn-block.text-white(type="submit")
+                    i.fa.fa-fw.fa-send
+                    span Send
+            .box.box-blue.my-5.p-2.text-right
+              .header.text-white.pb-3 Rice Varieties
+              h5.text-warning.py-4.
+                Super Kernel basmati, Irri-6, Irri-9, Brown, Polished Parboiled
+              a.text-white.pt-4(href="/product/rice")
+                span.px-1 View Details
+                i.fa.fa-arrow-circle-o-right
+            .box.box-red.mb-3.p-2.text-right
+              .header.text-white.pb-3 Rice Processing
+              h5.text-dark.py-4.
+                The process begins as soon as rice arrives from the fields...
+              a.text-white(href="/factory-process")
+                span.px-1 View Details
+                i.fa.fa-arrow-circle-o-right 
+            .box
+              img(src="/images/member-box.png")
+            
+    footer.pt-5.pb-2
+      .container
+        .row
+          .col.text-white
+            h5 QUALITY POLICY
+            p
+              small.card-text. 
+                Committed to satisfy the customers by providing Hygienic, Safe and Convenient food products
+              hr
+              small.card-text.
+                Striving hard to establish and maintain a consumer focused management system through a skilled 
+                and qualified team.
+          .col.text-white
+            h5 RICE PROCESSING
+            ul
+              li 
+                a.text-white(href="/product/rice") 
+                  small.card-text Paddy Rice
+              li 
+                a.text-white(href="/product/rice") 
+                  small.card-text Processing
+              li 
+                a.text-white(href="/product/rice") 
+                  small.card-text Dehausking
+              li 
+                a.text-white(href="/product/rice") 
+                  small.card-text Parboiling
+              li 
+                a.text-white(href="/product/rice") 
+                  small.card-text Brown Rice
+              li 
+                a.text-white(href="/product/rice") 
+                  small.card-text Milling
+              li 
+                a.text-white(href="/product/rice") 
+                  small.card-text White Rice
+
+          .col.text-white
+            h5 RICE PROCESSING
+            ul
+              li 
+                a.text-white(href="/") 
+                  small.card-text Home
+              li 
+                a.text-white(href="/about") 
+                  small.card-text About us
+              li 
+                a.text-white(href="/product/rice") 
+                  small.card-text Products
+              li 
+                a.text-white(href="/factory-process") 
+                  small.card-text Process
+              li 
+                a.text-white(href="/quality") 
+                  small.card-text Quality Assurance
+              li 
+                a.text-white(href="/contact") 
+                  small.card-text Contact us
+              li 
+                a.text-white(href="/gallery") 
+                  small.card-text Gallery
+          .col.text-white
+            h5 SUBSCRIBE
+            small.card-text Enter your email address to receive updates and newsletters from us
+            form(action="")
+              .form-group
+                .input-group
+                  .input-group-prepend
+                    .input-group-text
+                      i.fa.fa-envelope
+                    input.form-control(type="email", placeholder="Enter your email", style='border-radius: 0 !important;')
+              .form-group
+                button.form-control.btn.btn-outline-light.mt-1(type='submit', style='border-radius: 0 !important;') Subscribe
+        hr
+        p.text-white.text-center 
+          small &copy; Pralisha International Company - Ghana Limited

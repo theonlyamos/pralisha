@@ -91,6 +91,11 @@ h4 {
   border: 2px solid green;
 }
 
+.line-grey {
+  width: 100%;
+  border: 2px solid grey;
+}
+
 .thumbnail {
   border: 1px solid #c1c1c1;
   border-radius: 5px;
@@ -101,14 +106,27 @@ h4 {
   box-shadow: 1px 1px 5px black;
 }
 
+.product {
+  border: 1px solid #c1c1c1;
+  border-radius: 5px;
+  float: left;
+  margin-right: 15px;
+  padding: 7px;
+  background: white;
+  box-shadow: 1px 1px 5px black;
+  width: 250px;
+  height: 250px;
+}
+
+.product img {
+  width: 100%;
+  height: 100%;
+}
+
 ul {
   margin-left: 15px;
   list-style: square;
   padding: 0;
-}
-
-ul.values {
-  list-style: none;
 }
 
 ul.values li {

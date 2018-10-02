@@ -24,6 +24,10 @@ router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'Contact us | Pralisha International Ghana Company Limited' });
 });
 
+router.get('/products', function(req, res, next) {
+  res.render('products', { title: 'Products | Pralisha International Ghana Company Limited' });
+});
+
 router.get('/gallery', function(req, res, next) {
   let fullpath = path.join(__dirname, '..', 'public', 'gallery')
   fs.readdir(fullpath, (err, files) => {
