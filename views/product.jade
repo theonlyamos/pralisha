@@ -10,6 +10,7 @@ html
     script(type='text/javascript', src='/javascripts/jquery.min.js')
     script(type='text/javascript', src='/javascripts/popper.min.js')
     script(type='text/javascript', src='/javascripts/bootstrap.min.js')
+    script(src='https://www.google.com/recaptcha/api.js')
   body(data-spy="scroll", data-target="#navbar", data-offset="150")
     nav.navbar.navbar-expand-lg.navbar-dark.py-3.sticky-top
       .container
@@ -62,6 +63,8 @@ html
                   input.form-control(type="text", placeholder="Company Name", name="company")
               .form-group.mb-2
                   input.form-control(type="text", placeholder="Your Name", name="name")
+              .form-group
+                .g-recaptcha(data-sitekey='6LepDnMUAAAAAFZVBJUDbn5IhLCRSAt2fjpzvKH6')
               .form-group.mb-2
                   button.btn.btn-primary.btn-block.text-white(type="submit")
                     i.fa.fa-fw.fa-send
