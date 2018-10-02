@@ -1,44 +1,13 @@
 extends product
 
 block content
-  .container
-    .page
-      .head.text-light Cooking Oil
-      .row.my-2
-        .col-md-8
-          .card.product.my-2
-            a(href="#picturesModal", data-toggle='modal')
-              .card-title.text-primary Click for more images
-                br
-                a(href="#picturesModal", data-toggle='modal')
-                  small.text-white Packaging at the factory
-            a(href="#picturesModal", data-toggle='modal')
-              img.card-img-top(src="/images/oil.jpg", style="height: 400px !important;")
+  .head
+    .container
+      h3.m-0.py-3
+        strong VEGETABLE COOKING OIL
 
-          
-        .col-md-4
-          .card.my-2.p-3
-            strong.text-center.text-secondary Ask for Quotation
-            p
-            form(action="")
-              .input-group.text-right
-                .input-group-prepend
-                  label.input-group-text Quantity
-                input.form-control(type="number", placeholder="3", name="quantity", id="quanity")
-              .form-group
-                label.text-secondary(for="details")
-                textarea.form-control.text-secondary(name="details", rows="6", placeholder="Additional details you would like to add")
-              .form-group.my-2
-                input(type="hidden", name="product", value="rice")
-                strong.text-center.text-secondary Your Business Information 
-                input.form-control(type="text", placeholder="Email", name="email")
-              .form-group.mb-2
-                input.form-control(type="text", placeholder="Confirm Email", name="conf_email")
-              .form-group.mb-2
-                input.form-control(type="text", placeholder="Company Name", name="company")
-              .form-group.mb-2
-                input.form-control(type="text", placeholder="Your Name", name="name")
-              .form-group.mb-2
-                button.btn.btn-primary.btn-block.text-white(type="submit")
-                  i.fa.fa-fw.fa-send
-                  span Send
+block section
+  .col-md-8
+    img(src='/images/cooking-oil-stretch.jpg', style="width: 100%;height: 340px;border:5px solid white;")
+
+ 
