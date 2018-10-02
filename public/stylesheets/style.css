@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 10px Arial, Helvetica, sans-serif;
+}
+
+
+a.navbar-brand span {
+  font-size: 1.5rem;
+}
+
+.navbar {
+  background: linear-gradient(to bottom, #007bff, #006994);
+  background-repeat: no-repeat;
+}
+
+.nav-item.active > .nav-link {
+  background: #549eec;
+  color: white !important;
+  border-radius: 3px;
+}
+
+.bg-green {
+  background: url("/images/bg-light-green.jpg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100% 100%;
+}
+
+.bg-blue {
+  background: url("/images/bg-light-blue.jpg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100% 100%;
+}
+
+.btn {
+  border-radius: 0 !important;
+}
+
+header {
+  width: 100%;
+  height: 350px;
+}
+
+.header {
+  text-shadow: none;
+  font-size: 1.4em;
+  font-weight: 100;
+  line-height: 1.85em !important;
+}
+
+p {
+  line-height: 1.2em;
+}
+
+header img {
+  width: 100%;
+  filter: brightness(80%) hue-rotate(100deg);
+  height: 100%;
+  object-fit: cover;
+}
+
+section {
+  background: #DEDEDE;
+  width: 100%;
+}
+
+h4 {
+  font-weight: 100;
+}
+
+.card-text {
+  text-shadow: none;
+  font-size: 12px !important;
+  font-weight: 100 !important;
+  word-wrap: break-word;
+  line-height: 1em;
+}
+
+.line-brown {
+  width: 100%;
+  border: 2px solid brown;
+}
+
+.line-green {
+  width: 100%;
+  border: 2px solid green;
+}
+
+.thumbnail {
+  border: 1px solid #c1c1c1;
+  border-radius: 5px;
+  float: left;
+  margin-right: 15px;
+  padding: 7px;
+  background: white;
+  box-shadow: 1px 1px 5px black;
+}
+
+ul {
+  margin-left: 15px;
+  list-style: square;
+  padding: 0;
+}
+
+ul.values {
+  list-style: none;
+}
+
+ul.values li {
+  line-height: 1em;
+}
+
+.box {
+  width: 278px;
+  height: 251px;
+  border-radius: 5px;
+}
+
+.box-blue { 
+  background: url("/images/foxtail.png"),
+              linear-gradient(to top right,#003eaa 40%,#004ec2 60%,#0060df 80%,#0080ff 90%,#00c7ff 100%);
+  background-size: cover;
+}
+
+.box-green {
+  background: url("/images/foxtail.png"),
+              linear-gradient(to top right,#14dd02 40%, #489b0c 60%,
+              #64c420 80%,#72e91c 90%,#90f14a 100%);
+  background-size: cover;
+}
+
+.box-yellow {
+  background: url("/images/foxtail.png"),
+              linear-gradient(to top right,rgb(196, 167, 6) 40%, #d6ca1f 60%,
+              #ecf028 80%,#ebee36 90%,yellow 100%);
+  background-size: cover;
+}
+
+.box-red {
+  background: url("/images/foxtail.png"),
+              linear-gradient(to top right,red 40%, #db1313 60%,
+              #f54141 80%,#db3b3b 90%,rgb(243, 81, 81) 100%);
+  background-size: cover;
+}
+
+.head {
+  background: linear-gradient(#DEDEDE, silver)
+}
+
+
+footer {
+  background: linear-gradient(to bottom, #007bff, #1380ac, #007bff);
+}

@@ -1,0 +1,198 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/font-awesome.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    script(type='text/javascript', src='/javascripts/jquery.min.js')
+    script(type='text/javascript', src='/javascripts/popper.min.js')
+    script(type='text/javascript', src='/javascripts/bootstrap.min.js')
+    script(src='https://www.google.com/recaptcha/api.js')
+  body(data-spy="scroll", data-target="#navbar", data-offset="150")
+    nav.navbar.navbar-expand-lg.navbar-dark.py-3.sticky-top
+      .container
+        a.navbar-brand(href='/')
+          img(src='/images/logo-white.png', style="width: 50px; height: 50px;")
+          span.px-2.text-white.d-none.d-lg-inline.d-xs-none PRALISHA INT. 
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbar')
+            span.navbar-toggler-icon
+        #navbar.collapse.navbar-collapse.justify-content-end
+          ul.navbar-nav
+            li.nav-item
+              a.nav-link(href="/") Home
+            li.nav-item
+              a.nav-link(href="/about") About us
+            li.nav-item
+              a.nav-link(href="/products") Products
+            li.nav-item
+              a.nav-link(href="/factory-process") Process
+            li.nav-item
+              a.nav-link(href="/quality") Quality Assurance
+            li.nav-item.active
+              a.nav-link(href="/contact") Contact us
+            li.nav-item
+              a.nav-link(href="/gallery") Gallery
+
+
+    .head
+      .container
+        h3.m-0.py-3
+          strong CONTACT US
+    section.py-5
+      .container
+        .row
+          .col-md-6
+            h5.text-secondary.py-2 FIND US HERE
+            .mapouter
+              .gmap_canvas
+                iframe#gmap_canvas(width='100%', height='450px', src='https://maps.google.com/maps?q=takoradi&t=&z=13&ie=UTF8&iwloc=&output=embed', frameborder='0', scrolling='no', marginheight='0', marginwidth='0')
+                a(href='https://www.pureblack.de')
+              style.
+                .mapouter{text-align:right;height:450px;width:100%;}.gmap_canvas {overflow:hidden;background:none!important;height:450px;width:100%;}
+          .col-md-6
+            h5.text-secondary.py-2 FEEDBACK FORM
+            form(action="")
+              .form-group
+                input.form-control(type="text", placeholder="Name", name="name", required)
+              .form-group
+                input.form-control(type="email", placeholder="Email", name="email", required)
+              .form-group
+                input.form-control(type="text", placeholder="Country", name="country", required)
+              .form-group
+                textarea.form-control(rows="5", placeholder="Message", name="message", required)
+              .form-group
+                .g-recaptcha(data-sitekey='6LepDnMUAAAAAFZVBJUDbn5IhLCRSAt2fjpzvKH6')
+              .form-group
+                button.btn.btn-outline-dark.btn-block(type="submit")
+                  i.fa.fa-send.fa-fw
+                  span Send
+        .row.py-5
+          .col-md-3
+            h5.text-secondary.py-2 CONTACT PERSON: 
+            p
+              small.card-text.text-secondary HEAD OFFICE :
+              br
+              small.card-text.text-secondary 
+                i.fa.fa-map-marker.fa-fw 
+                span LS-46, 5C-1, North Karachi, Karachi-Pakistan.
+              br
+              a.text-secondary(href="tel:+922132626558")
+                small.card-text
+                  i.fa.fa-phone.fa-fw
+                  span +92 213 2626558
+              br
+              a.text-secondary(href="tel:+922132626769")
+                small.card-text 
+                  i.fa.fa-phone.fa-fw
+                  span +92 213 2626769
+              br
+              a.text-secondary(href="tel:+922138140264")
+                small.card-text
+                  i.fa.fa-fax.fa-fw
+                  span +92 213 8140264
+              br
+              a.text-secondary(href="tel:+923212363951")
+                small.card-text
+                  i.fa.fa-mobile.fa-fw
+                  span +92 321 2363951
+              br
+              a.text-secondary(href="mailto:info@pralisha.com")
+                small.card-text
+                  i.fa.fa-envelope.fa-fw
+                  span info@pralisha.com
+              br
+              a.text-secondary(href="https://pralisha.com")
+                small.card-text
+                  i.fa.fa-globe.fa-fw
+                  span https://pralisha.com
+          .col-md-6
+            h5.text-secondary.py-2 PROCESSING UNIT :
+            p
+              small.card-text.text-secondary
+                i.fa.fa-map-marker.fa-fw
+                span D-575, S.I.T.E Industrial Area, Karachi, Pakistan
+              br
+              a.text-secondary(href="mailto:process@pralisha.com")
+                small
+                  i.fa.fa-envelope.fa-fw
+                  span processing@iqratradingco.com
+    
+    footer.pt-5.pb-2
+      .container
+        .row
+          .col.text-white
+            h5 QUALITY POLICY
+            p
+              small.card-text. 
+                Committed to satisfy the customers by providing Hygienic, Safe and Convenient food products
+              hr
+              small.card-text.
+                Striving hard to establish and maintain a consumer focused management system through a skilled 
+                and qualified team.
+          .col.text-white
+            h5 RICE PROCESSING
+            ul
+              li 
+                a.text-white(href="/product/rice") 
+                  small.card-text Paddy Rice
+              li 
+                a.text-white(href="/product/rice") 
+                  small.card-text Processing
+              li 
+                a.text-white(href="/product/rice") 
+                  small.card-text Dehausking
+              li 
+                a.text-white(href="/product/rice") 
+                  small.card-text Parboiling
+              li 
+                a.text-white(href="/product/rice") 
+                  small.card-text Brown Rice
+              li 
+                a.text-white(href="/product/rice") 
+                  small.card-text Milling
+              li 
+                a.text-white(href="/product/rice") 
+                  small.card-text White Rice
+
+          .col.text-white
+            h5 RICE PROCESSING
+            ul
+              li 
+                a.text-white(href="/") 
+                  small.card-text Home
+              li 
+                a.text-white(href="/about") 
+                  small.card-text About us
+              li 
+                a.text-white(href="/product/rice") 
+                  small.card-text Products
+              li 
+                a.text-white(href="/factory-process") 
+                  small.card-text Process
+              li 
+                a.text-white(href="/quality") 
+                  small.card-text Quality Assurance
+              li 
+                a.text-white(href="/contact") 
+                  small.card-text Contact us
+              li 
+                a.text-white(href="/gallery") 
+                  small.card-text Gallery
+          .col.text-white
+            h5 SUBSCRIBE
+            small.card-text Enter your email address to receive updates and newsletters from us
+            form(action="")
+              .form-group
+                .input-group
+                  .input-group-prepend
+                    .input-group-text
+                      i.fa.fa-envelope
+                    input.form-control(type="email", placeholder="Enter your email", style='border-radius: 0 !important;')
+              .form-group
+                button.form-control.btn.btn-outline-light.mt-1(type='submit', style='border-radius: 0 !important;') Subscribe
+        hr
+        p.text-white.text-center 
+          small &copy; Pralisha International Company - Ghana Limited

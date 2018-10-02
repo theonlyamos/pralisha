@@ -1,0 +1,109 @@
+extends product
+
+block content
+  .container
+    .page
+      .head.text-light=product
+      .row.my-2
+        .col-md-3
+          .card.my-2
+            img.item.p-2(src="/images/sugar.jpg")
+            .card-footer.text-center
+              h5 WHITE SUGAR
+        .col-md-6
+          .card.my-2
+            .card-body
+              table.table.table-striped
+                tbody
+                  tr
+                    th Type
+                    td ICUMSA - 45
+                  tr
+                    th Structure
+                    td White and Fine Particles
+                  tr
+                    th Origin	
+                    td Brazil
+                  tr
+                    th Packaging
+                    td Thailand
+                  tr 
+                    th Quality	
+                    td International Standard
+                  tr 
+                    th Quantity	
+                    td As per required
+                  tr
+                    th Packing	
+                    td 50kgs bag PP
+                  tr
+                    th Labelling	
+                    td Customer brand with extra cost
+          .card.product.my-2
+            a(href="#picturesModal", data-toggle='modal')
+              .card-title.text-primary Click for more images
+                br
+                a(href="#picturesModal", data-toggle='modal')
+                  small.text-white Packaging at the factory
+            a(href="#picturesModal", data-toggle='modal')
+              img.card-img-top(src="/images/sugar-3.jpg", style="height: 400px !important;")
+
+          
+          .card 
+            table.table.table-striped
+              thead.bg-dark.text-white 
+                tr
+                  th(colspan="2") SPECIFICATIONS
+              tbody
+                tr
+                  th Ash Content 	
+                  td 0.04% Maximum by Weight
+                tr
+                  th Moisture	
+                  td 0.04% Maximum by Weight
+                tr
+                  th Solubility	
+                  td 100% Dry &amp; Free Flowing
+                tr
+                  th Granulation
+                  td Fine Standard
+                tr 
+                  th Color	
+                  td Sparkling White
+                tr
+                  th Sediments	
+                  td None
+                tr
+                  th Substance	
+                  td Solid Crystal
+                tr
+                  th Smell	
+                  td Free from any smell
+
+
+        .col-md-3
+          .card.my-2.p-3
+            strong.text-center.text-secondary Ask for Quotation
+            p
+            form(action="")
+              .input-group.text-right
+                .input-group-prepend
+                  label.input-group-text Quantity
+                input.form-control(type="number", placeholder="3", name="quantity", id="quanity")
+              .form-group
+                label.text-secondary(for="details")
+                textarea.form-control.text-secondary(name="details", rows="6", placeholder="Additional details you would like to add")
+              .form-group.my-2
+                input(type="hidden", name="product", value="rice")
+                strong.text-center.text-secondary Your Business Information 
+                input.form-control(type="text", placeholder="Email", name="email")
+              .form-group.mb-2
+                input.form-control(type="text", placeholder="Confirm Email", name="conf_email")
+              .form-group.mb-2
+                input.form-control(type="text", placeholder="Company Name", name="company")
+              .form-group.mb-2
+                input.form-control(type="text", placeholder="Your Name", name="name")
+              .form-group.mb-2
+                button.btn.btn-primary.btn-block.text-white(type="submit")
+                  i.fa.fa-fw.fa-send
+                  span Send

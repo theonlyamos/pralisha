@@ -1,0 +1,117 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/font-awesome.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    script(type='text/javascript', src='/javascripts/jquery.min.js')
+    script(type='text/javascript', src='/javascripts/popper.min.js')
+    script(type='text/javascript', src='/javascripts/bootstrap.min.js')
+  body(data-spy="scroll", data-target="#navbar", data-offset="150")
+    nav.navbar.navbar-expand-lg.navbar-dark.py-3.sticky-top
+      .container
+        a.navbar-brand(href='/')
+          img(src='/images/logo-white.png', style="width: 50px; height: 50px;")
+          span.px-2.text-white.d-none.d-lg-inline.d-xs-none PRALISHA INT. 
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbar')
+            span.navbar-toggler-icon
+        #navbar.collapse.navbar-collapse.justify-content-end
+          ul.navbar-nav
+            li.nav-item.active
+              a.nav-link(href="/") Home
+            li.nav-item
+              a.nav-link(href="/about") About us
+            li.nav-item
+              a.nav-link(href="/products") Products
+            li.nav-item
+              a.nav-link(href="/factory-process") Process
+            li.nav-item
+              a.nav-link(href="/quality") Quality Assurance
+            li.nav-item
+              a.nav-link(href="/contact") Contact us
+            li.nav-item
+              a.nav-link(href="/gallery") Gallery
+
+    .error.m-5.p-5.align-items-center.text-center.bg-secondary
+      h1.py-5.display-1= error.status
+      h5.text-white= message
+    
+    footer.pt-5.pb-2
+      .container
+        .row
+          .col.text-white
+            h5 QUALITY POLICY
+            p
+              small.card-text. 
+                Committed to satisfy the customers by providing Hygienic, Safe and Convenient food products
+              hr
+              small.card-text.
+                Striving hard to establish and maintain a consumer focused management system through a skilled 
+                and qualified team.
+          .col.text-white
+            h5 RICE PROCESSING
+            ul
+              li 
+                a.text-white(href="/product/rice") 
+                  small.card-text Paddy Rice
+              li 
+                a.text-white(href="/product/rice") 
+                  small.card-text Processing
+              li 
+                a.text-white(href="/product/rice") 
+                  small.card-text Dehausking
+              li 
+                a.text-white(href="/product/rice") 
+                  small.card-text Parboiling
+              li 
+                a.text-white(href="/product/rice") 
+                  small.card-text Brown Rice
+              li 
+                a.text-white(href="/product/rice") 
+                  small.card-text Milling
+              li 
+                a.text-white(href="/product/rice") 
+                  small.card-text White Rice
+
+          .col.text-white
+            h5 RICE PROCESSING
+            ul
+              li 
+                a.text-white(href="/") 
+                  small.card-text Home
+              li 
+                a.text-white(href="/about") 
+                  small.card-text About us
+              li 
+                a.text-white(href="/product/rice") 
+                  small.card-text Products
+              li 
+                a.text-white(href="/factory-process") 
+                  small.card-text Process
+              li 
+                a.text-white(href="/quality") 
+                  small.card-text Quality Assurance
+              li 
+                a.text-white(href="/contact") 
+                  small.card-text Contact us
+              li 
+                a.text-white(href="/gallery") 
+                  small.card-text Gallery
+          .col.text-white
+            h5 SUBSCRIBE
+            small.card-text Enter your email address to receive updates and newsletters from us
+            form(action="")
+              .form-group
+                .input-group
+                  .input-group-prepend
+                    .input-group-text
+                      i.fa.fa-envelope
+                    input.form-control(type="email", placeholder="Enter your email", style='border-radius: 0 !important;')
+              .form-group
+                button.form-control.btn.btn-outline-light.mt-1(type='submit', style='border-radius: 0 !important;') Subscribe
+        hr
+        p.text-white.text-center 
+          small &copy; Pralisha International Company - Ghana Limited
