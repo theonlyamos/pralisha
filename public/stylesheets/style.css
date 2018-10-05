@@ -146,6 +146,7 @@ ul.values li {
   width: 278px;
   height: 251px;
   border-radius: 5px;
+  box-shadow: 1px 1px 3px black;
 }
 
 .box-blue { 
